@@ -21,7 +21,7 @@ require (
 	github.com/tidwall/gjson v1.14.2
 	github.com/tidwall/sjson v1.2.5
 	github.com/vmihailenco/msgpack/v5 v5.3.5
-	golang.org/x/sync v0.5.0
+	golang.org/x/sync v0.11.0
 	google.golang.org/grpc v1.61.2
 )
 
