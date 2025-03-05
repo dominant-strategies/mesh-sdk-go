@@ -5,7 +5,6 @@ go 1.24
 require (
 	github.com/DataDog/zstd v1.5.6
 	github.com/Zilliqa/gozilliqa-sdk v1.2.1-0.20201201074141-dd0ecada1be6
-	github.com/btcsuite/btcd v0.22.1
 	github.com/cenkalti/backoff v2.2.1+incompatible
 	github.com/coinbase/kryptology v1.8.0
 	github.com/coinbase/rosetta-sdk-go v0.8.9
