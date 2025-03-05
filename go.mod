@@ -11,7 +11,7 @@ require (
 	github.com/coinbase/rosetta-sdk-go v0.8.9
 	github.com/coinbase/rosetta-sdk-go/types v1.0.0
 	github.com/dgraph-io/badger/v2 v2.2007.4
-	github.com/ethereum/go-ethereum v1.15.4
+	github.com/ethereum/go-ethereum v1.15.5
 	github.com/fatih/color v1.18.0
 	github.com/google/uuid v1.6.0
 	github.com/gorilla/mux v1.8.1
