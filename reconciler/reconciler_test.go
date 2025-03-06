@@ -24,12 +24,12 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 
-	mocks "github.com/coinbase/rosetta-sdk-go/mocks/reconciler"
-	mockDatabase "github.com/coinbase/rosetta-sdk-go/mocks/storage/database"
-	"github.com/coinbase/rosetta-sdk-go/parser"
-	storageErrors "github.com/coinbase/rosetta-sdk-go/storage/errors"
-	"github.com/coinbase/rosetta-sdk-go/types"
-	"github.com/coinbase/rosetta-sdk-go/utils"
+	mocks "github.com/dominant-strategies/mesh-sdk-go/mocks/reconciler"
+	mockDatabase "github.com/dominant-strategies/mesh-sdk-go/mocks/storage/database"
+	"github.com/dominant-strategies/mesh-sdk-go/parser"
+	storageErrors "github.com/dominant-strategies/mesh-sdk-go/storage/errors"
+	"github.com/dominant-strategies/mesh-sdk-go/types"
+	"github.com/dominant-strategies/mesh-sdk-go/utils"
 )
 
 func TestNewReconciler(t *testing.T) {

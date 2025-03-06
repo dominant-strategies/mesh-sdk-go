@@ -21,9 +21,9 @@ import (
 
 	"github.com/neilotoole/errgroup"
 
-	"github.com/coinbase/rosetta-sdk-go/storage/database"
-	"github.com/coinbase/rosetta-sdk-go/types"
-	"github.com/coinbase/rosetta-sdk-go/utils"
+	"github.com/dominant-strategies/mesh-sdk-go/storage/database"
+	"github.com/dominant-strategies/mesh-sdk-go/types"
+	"github.com/dominant-strategies/mesh-sdk-go/utils"
 )
 
 const (

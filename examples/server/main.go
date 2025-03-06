@@ -20,10 +20,10 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/coinbase/rosetta-sdk-go/asserter"
-	"github.com/coinbase/rosetta-sdk-go/examples/server/services"
-	"github.com/coinbase/rosetta-sdk-go/server"
-	"github.com/coinbase/rosetta-sdk-go/types"
+	"github.com/dominant-strategies/mesh-sdk-go/asserter"
+	"github.com/dominant-strategies/mesh-sdk-go/examples/server/services"
+	"github.com/dominant-strategies/mesh-sdk-go/server"
+	"github.com/dominant-strategies/mesh-sdk-go/types"
 )
 
 const (

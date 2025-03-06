@@ -25,11 +25,11 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/coinbase/rosetta-sdk-go/asserter"
-	"github.com/coinbase/rosetta-sdk-go/fetcher"
-	mocks "github.com/coinbase/rosetta-sdk-go/mocks/utils"
-	storageErrors "github.com/coinbase/rosetta-sdk-go/storage/errors"
-	"github.com/coinbase/rosetta-sdk-go/types"
+	"github.com/dominant-strategies/mesh-sdk-go/asserter"
+	"github.com/dominant-strategies/mesh-sdk-go/fetcher"
+	mocks "github.com/dominant-strategies/mesh-sdk-go/mocks/utils"
+	storageErrors "github.com/dominant-strategies/mesh-sdk-go/storage/errors"
+	"github.com/dominant-strategies/mesh-sdk-go/types"
 )
 
 func TestCreateAndRemoveTempDir(t *testing.T) {

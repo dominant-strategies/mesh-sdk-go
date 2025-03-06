@@ -17,9 +17,9 @@ package worker
 import (
 	"context"
 
-	"github.com/coinbase/rosetta-sdk-go/keys"
-	"github.com/coinbase/rosetta-sdk-go/storage/database"
-	"github.com/coinbase/rosetta-sdk-go/types"
+	"github.com/dominant-strategies/mesh-sdk-go/keys"
+	"github.com/dominant-strategies/mesh-sdk-go/storage/database"
+	"github.com/dominant-strategies/mesh-sdk-go/types"
 )
 
 // Helper is used by the worker to process Jobs.

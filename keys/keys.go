@@ -26,8 +26,8 @@ import (
 	"github.com/btcsuite/btcd/btcec"
 	"github.com/coinbase/kryptology/pkg/signatures/schnorr/mina"
 
-	"github.com/coinbase/rosetta-sdk-go/asserter"
-	"github.com/coinbase/rosetta-sdk-go/types"
+	"github.com/dominant-strategies/mesh-sdk-go/asserter"
+	"github.com/dominant-strategies/mesh-sdk-go/types"
 )
 
 // PrivKeyBytesLen are 32-bytes for all supported curvetypes

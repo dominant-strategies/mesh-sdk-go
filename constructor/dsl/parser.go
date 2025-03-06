@@ -24,7 +24,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/coinbase/rosetta-sdk-go/constructor/job"
+	"github.com/dominant-strategies/mesh-sdk-go/constructor/job"
 )
 
 const (

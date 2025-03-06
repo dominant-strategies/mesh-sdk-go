@@ -18,7 +18,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/coinbase/rosetta-sdk-go/types"
+	"github.com/dominant-strategies/mesh-sdk-go/types"
 )
 
 // ExpectedOperation returns an error if an observed operation

@@ -17,7 +17,7 @@ package asserter
 import (
 	"fmt"
 
-	"github.com/coinbase/rosetta-sdk-go/types"
+	"github.com/dominant-strategies/mesh-sdk-go/types"
 )
 
 // SearchTransactionsResponse ensures a

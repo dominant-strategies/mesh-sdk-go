@@ -18,8 +18,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/coinbase/rosetta-sdk-go/asserter"
-	"github.com/coinbase/rosetta-sdk-go/types"
+	"github.com/dominant-strategies/mesh-sdk-go/asserter"
+	"github.com/dominant-strategies/mesh-sdk-go/types"
 )
 
 // NetworkStatus returns the validated response

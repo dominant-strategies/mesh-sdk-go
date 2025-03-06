@@ -18,8 +18,8 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/coinbase/rosetta-sdk-go/keys"
-	"github.com/coinbase/rosetta-sdk-go/types"
+	"github.com/dominant-strategies/mesh-sdk-go/keys"
+	"github.com/dominant-strategies/mesh-sdk-go/types"
 )
 
 const (

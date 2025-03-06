@@ -19,7 +19,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/coinbase/rosetta-sdk-go/types"
+	"github.com/dominant-strategies/mesh-sdk-go/types"
 )
 
 const (

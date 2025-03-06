@@ -14,7 +14,7 @@
 
 package keys
 
-import "github.com/coinbase/rosetta-sdk-go/types"
+import "github.com/dominant-strategies/mesh-sdk-go/types"
 
 // Signer is an interface for different curve signers
 type Signer interface {

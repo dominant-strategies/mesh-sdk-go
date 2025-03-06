@@ -22,7 +22,7 @@ import (
 	"io"
 	_nethttp "net/http"
 
-	"github.com/coinbase/rosetta-sdk-go/types"
+	"github.com/dominant-strategies/mesh-sdk-go/types"
 )
 
 // Linger please

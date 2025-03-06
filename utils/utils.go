@@ -30,9 +30,9 @@ import (
 
 	"github.com/fatih/color"
 
-	"github.com/coinbase/rosetta-sdk-go/fetcher"
-	storageErrors "github.com/coinbase/rosetta-sdk-go/storage/errors"
-	"github.com/coinbase/rosetta-sdk-go/types"
+	"github.com/dominant-strategies/mesh-sdk-go/fetcher"
+	storageErrors "github.com/dominant-strategies/mesh-sdk-go/storage/errors"
+	"github.com/dominant-strategies/mesh-sdk-go/types"
 )
 
 const (

@@ -21,7 +21,7 @@ import (
 	"path"
 	"strings"
 
-	"github.com/coinbase/rosetta-sdk-go/types"
+	"github.com/dominant-strategies/mesh-sdk-go/types"
 )
 
 // Asserter contains all logic to perform static
@@ -46,7 +46,7 @@ type Asserter struct {
 
 // Validations is used to define stricter validations
 // on the transaction. Fore more details please refer to
-// https://github.com/coinbase/rosetta-sdk-go/tree/master/asserter#readme
+// https://github.com/dominant-strategies/mesh-sdk-go/tree/master/asserter#readme
 type Validations struct {
 	Enabled          bool                 `json:"enabled"`
 	RelatedOpsExists bool                 `json:"related_ops_exists"`

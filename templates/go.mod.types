@@ -1,3 +1,3 @@
-module github.com/coinbase/rosetta-sdk-go/types
+module github.com/dominant-strategies/mesh-sdk-go/types
 
 go 1.19

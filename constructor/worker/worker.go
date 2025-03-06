@@ -29,12 +29,12 @@ import (
 	"github.com/lucasjones/reggen"
 	"github.com/tidwall/sjson"
 
-	"github.com/coinbase/rosetta-sdk-go/asserter"
-	"github.com/coinbase/rosetta-sdk-go/constructor/job"
-	"github.com/coinbase/rosetta-sdk-go/keys"
-	"github.com/coinbase/rosetta-sdk-go/storage/database"
-	"github.com/coinbase/rosetta-sdk-go/types"
-	"github.com/coinbase/rosetta-sdk-go/utils"
+	"github.com/dominant-strategies/mesh-sdk-go/asserter"
+	"github.com/dominant-strategies/mesh-sdk-go/constructor/job"
+	"github.com/dominant-strategies/mesh-sdk-go/keys"
+	"github.com/dominant-strategies/mesh-sdk-go/storage/database"
+	"github.com/dominant-strategies/mesh-sdk-go/types"
+	"github.com/dominant-strategies/mesh-sdk-go/utils"
 )
 
 // New returns a new *Worker.

@@ -23,10 +23,10 @@ import (
 
 	"golang.org/x/sync/errgroup"
 
-	"github.com/coinbase/rosetta-sdk-go/parser"
-	storageErrors "github.com/coinbase/rosetta-sdk-go/storage/errors"
-	"github.com/coinbase/rosetta-sdk-go/types"
-	"github.com/coinbase/rosetta-sdk-go/utils"
+	"github.com/dominant-strategies/mesh-sdk-go/parser"
+	storageErrors "github.com/dominant-strategies/mesh-sdk-go/storage/errors"
+	"github.com/dominant-strategies/mesh-sdk-go/types"
+	"github.com/dominant-strategies/mesh-sdk-go/utils"
 )
 
 // New creates a new Reconciler.

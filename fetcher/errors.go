@@ -23,8 +23,8 @@ import (
 
 	"github.com/fatih/color"
 
-	utils "github.com/coinbase/rosetta-sdk-go/errors"
-	"github.com/coinbase/rosetta-sdk-go/types"
+	utils "github.com/dominant-strategies/mesh-sdk-go/errors"
+	"github.com/dominant-strategies/mesh-sdk-go/types"
 )
 
 // Error wraps the two possible types of error responses returned

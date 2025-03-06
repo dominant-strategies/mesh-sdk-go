@@ -24,8 +24,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 
-	mocks "github.com/coinbase/rosetta-sdk-go/mocks/syncer"
-	"github.com/coinbase/rosetta-sdk-go/types"
+	mocks "github.com/dominant-strategies/mesh-sdk-go/mocks/syncer"
+	"github.com/dominant-strategies/mesh-sdk-go/types"
 )
 
 var (

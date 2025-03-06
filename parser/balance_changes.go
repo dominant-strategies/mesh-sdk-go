@@ -18,7 +18,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/coinbase/rosetta-sdk-go/types"
+	"github.com/dominant-strategies/mesh-sdk-go/types"
 )
 
 // BalanceChange represents a balance change that affected

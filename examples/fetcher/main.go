@@ -18,8 +18,8 @@ import (
 	"context"
 	"log"
 
-	"github.com/coinbase/rosetta-sdk-go/fetcher"
-	"github.com/coinbase/rosetta-sdk-go/types"
+	"github.com/dominant-strategies/mesh-sdk-go/fetcher"
+	"github.com/dominant-strategies/mesh-sdk-go/types"
 )
 
 const (

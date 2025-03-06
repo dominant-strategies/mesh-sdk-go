@@ -25,9 +25,9 @@ import (
 	"github.com/fatih/color"
 	"golang.org/x/sync/semaphore"
 
-	"github.com/coinbase/rosetta-sdk-go/asserter"
-	"github.com/coinbase/rosetta-sdk-go/client"
-	"github.com/coinbase/rosetta-sdk-go/types"
+	"github.com/dominant-strategies/mesh-sdk-go/asserter"
+	"github.com/dominant-strategies/mesh-sdk-go/client"
+	"github.com/dominant-strategies/mesh-sdk-go/types"
 )
 
 const (
