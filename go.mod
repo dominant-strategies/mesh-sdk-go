@@ -9,7 +9,7 @@ require (
 	github.com/cenkalti/backoff v2.2.1+incompatible
 	github.com/coinbase/kryptology v1.8.0
 	github.com/dgraph-io/badger/v2 v2.2007.4
-	github.com/ethereum/go-ethereum v1.15.4
+	github.com/ethereum/go-ethereum v1.15.5
 	github.com/fatih/color v1.18.0
 	github.com/google/uuid v1.6.0
 	github.com/gorilla/mux v1.8.1
