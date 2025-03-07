@@ -17,7 +17,7 @@ package keys
 import (
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/dominant-strategies/go-quai/common"
 	"github.com/stretchr/testify/assert"
 
 	"github.com/dominant-strategies/mesh-sdk-go/types"
