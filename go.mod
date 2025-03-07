@@ -4,6 +4,7 @@ go 1.24
 
 require (
 	github.com/DataDog/zstd v1.5.6
+	github.com/Zilliqa/gozilliqa-sdk v1.2.1-0.20201201074141-dd0ecada1be6
 	github.com/btcsuite/btcd v0.21.0-beta.0.20201114000516-e9c7a5ac6401
 	github.com/cenkalti/backoff v2.2.1+incompatible
 	github.com/coinbase/kryptology v1.8.0
@@ -12,6 +13,7 @@ require (
 	github.com/fatih/color v1.18.0
 	github.com/google/uuid v1.6.0
 	github.com/gorilla/mux v1.8.1
+	github.com/ledgerwatch/secp256k1 v1.0.0
 	github.com/lucasjones/reggen v0.0.0-20200904144131-37ba4fa293bb
 	github.com/mitchellh/mapstructure v1.5.0
 	github.com/neilotoole/errgroup v0.1.6

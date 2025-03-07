@@ -15,7 +15,12 @@
 package keys
 
 import (
+	"fmt"
+
+	zil_schnorr "github.com/Zilliqa/gozilliqa-sdk/schnorr"
+	"github.com/dominant-strategies/mesh-sdk-go/asserter"
 	"github.com/dominant-strategies/mesh-sdk-go/types"
+	"github.com/ledgerwatch/secp256k1"
 )
 
 // SignerSecp256k1 is initialized from a keypair
@@ -38,86 +43,85 @@ func (s *SignerSecp256k1) Sign(
 	payload *types.SigningPayload,
 	sigType types.SignatureType,
 ) (*types.Signature, error) {
-	// err := s.KeyPair.IsValid()
-	// if err != nil {
-	// 	return nil, fmt.Errorf("key pair is invalid: %w", err)
-	// }
-	// privKeyBytes := s.KeyPair.PrivateKey
+	err := s.KeyPair.IsValid()
+	if err != nil {
+		return nil, fmt.Errorf("key pair is invalid: %w", err)
+	}
+	privKeyBytes := s.KeyPair.PrivateKey
 
-	// if !(payload.SignatureType == sigType || payload.SignatureType == "") {
-	// 	return nil, fmt.Errorf(
-	// 		"signing payload signature type %v is invalid: %w",
-	// 		payload.SignatureType,
-	// 		ErrSignUnsupportedPayloadSignatureType,
-	// 	)
-	// }
+	if !(payload.SignatureType == sigType || payload.SignatureType == "") {
+		return nil, fmt.Errorf(
+			"signing payload signature type %v is invalid: %w",
+			payload.SignatureType,
+			ErrSignUnsupportedPayloadSignatureType,
+		)
+	}
 
-	// var sig []byte
-	// switch sigType {
-	// case types.EcdsaRecovery:
-	// 	sig, err = secp256k1.Sign(payload.Bytes, privKeyBytes)
-	// 	if err != nil {
-	// 		return nil, fmt.Errorf("failed to sign for %v: %w", types.EcdsaRecovery, err)
-	// 	}
-	// case types.Ecdsa:
-	// 	sig, err = secp256k1.Sign(payload.Bytes, privKeyBytes)
-	// 	if err != nil {
-	// 		return nil, fmt.Errorf("failed to sign for %v: %w", types.Ecdsa, err)
-	// 	}
-	// 	sig = sig[:EcdsaSignatureLen]
-	// case types.Schnorr1:
-	// 	sig, err = zil_schnorr.SignMessage(privKeyBytes, s.KeyPair.PublicKey.Bytes, payload.Bytes)
-	// 	if err != nil {
-	// 		return nil, fmt.Errorf("failed to sign for %v: %w", types.Schnorr1, err)
-	// 	}
-	// default:
-	// 	return nil, fmt.Errorf(
-	// 		"signature type %s is invalid: %w",
-	// 		types.PrintStruct(sigType),
-	// 		ErrSignUnsupportedSignatureType,
-	// 	)
-	// }
+	var sig []byte
+	switch sigType {
+	case types.EcdsaRecovery:
+		sig, err = secp256k1.Sign(payload.Bytes, privKeyBytes)
+		if err != nil {
+			return nil, fmt.Errorf("failed to sign for %v: %w", types.EcdsaRecovery, err)
+		}
+	case types.Ecdsa:
+		sig, err = secp256k1.Sign(payload.Bytes, privKeyBytes)
+		if err != nil {
+			return nil, fmt.Errorf("failed to sign for %v: %w", types.Ecdsa, err)
+		}
+		sig = sig[:EcdsaSignatureLen]
+	case types.Schnorr1:
+		sig, err = zil_schnorr.SignMessage(privKeyBytes, s.KeyPair.PublicKey.Bytes, payload.Bytes)
+		if err != nil {
+			return nil, fmt.Errorf("failed to sign for %v: %w", types.Schnorr1, err)
+		}
+	default:
+		return nil, fmt.Errorf(
+			"signature type %s is invalid: %w",
+			types.PrintStruct(sigType),
+			ErrSignUnsupportedSignatureType,
+		)
+	}
 
-	// return &types.Signature{
-	// 	SigningPayload: payload,
-	// 	PublicKey:      s.KeyPair.PublicKey,
-	// 	SignatureType:  payload.SignatureType,
-	// 	Bytes:          sig,
-	// }, nil
-	return nil, nil
+	return &types.Signature{
+		SigningPayload: payload,
+		PublicKey:      s.KeyPair.PublicKey,
+		SignatureType:  payload.SignatureType,
+		Bytes:          sig,
+	}, nil
 }
 
 // Verify verifies a Signature, by checking the validity of a Signature,
 // the SigningPayload, and the PublicKey of the Signature.
 func (s *SignerSecp256k1) Verify(signature *types.Signature) error {
-	// pubKey := signature.PublicKey.Bytes
-	// message := signature.SigningPayload.Bytes
-	// sig := signature.Bytes
+	pubKey := signature.PublicKey.Bytes
+	message := signature.SigningPayload.Bytes
+	sig := signature.Bytes
 
-	// err := asserter.Signatures([]*types.Signature{signature})
-	// if err != nil {
-	// 	return fmt.Errorf("signature is invalid: %w", err)
-	// }
+	err := asserter.Signatures([]*types.Signature{signature})
+	if err != nil {
+		return fmt.Errorf("signature is invalid: %w", err)
+	}
 
-	// var verify bool
-	// switch signature.SignatureType {
-	// case types.Ecdsa:
-	// 	verify = secp256k1.VerifySignature(pubKey, message, sig)
-	// case types.EcdsaRecovery:
-	// 	normalizedSig := sig[:EcdsaSignatureLen]
-	// 	verify = secp256k1.VerifySignature(pubKey, message, normalizedSig)
-	// case types.Schnorr1:
-	// 	verify = zil_schnorr.VerifySignature(pubKey, message, sig)
-	// default:
-	// 	return fmt.Errorf(
-	// 		"signature type %s is invalid: %w",
-	// 		types.PrintStruct(signature.SignatureType),
-	// 		ErrVerifyUnsupportedSignatureType,
-	// 	)
-	// }
+	var verify bool
+	switch signature.SignatureType {
+	case types.Ecdsa:
+		verify = secp256k1.VerifySignature(pubKey, message, sig)
+	case types.EcdsaRecovery:
+		normalizedSig := sig[:EcdsaSignatureLen]
+		verify = secp256k1.VerifySignature(pubKey, message, normalizedSig)
+	case types.Schnorr1:
+		verify = zil_schnorr.VerifySignature(pubKey, message, sig)
+	default:
+		return fmt.Errorf(
+			"signature type %s is invalid: %w",
+			types.PrintStruct(signature.SignatureType),
+			ErrVerifyUnsupportedSignatureType,
+		)
+	}
 
-	// if !verify {
-	// 	return ErrVerifyFailed
-	// }
+	if !verify {
+		return ErrVerifyFailed
+	}
 	return nil
 }
