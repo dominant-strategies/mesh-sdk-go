@@ -4,7 +4,6 @@ go 1.24
 
 require (
 	github.com/DataDog/zstd v1.5.6
-	github.com/btcsuite/btcd v0.21.0-beta.0.20201114000516-e9c7a5ac6401
 	github.com/cenkalti/backoff v2.2.1+incompatible
 	github.com/coinbase/kryptology v1.8.0
 	github.com/dgraph-io/badger/v2 v2.2007.4
