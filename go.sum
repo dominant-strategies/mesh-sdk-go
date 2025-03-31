@@ -59,8 +59,8 @@ github.com/dgraph-io/ristretto v0.0.3-0.20200630154024-f66de99634de h1:t0UHb5vdo
 github.com/dgraph-io/ristretto v0.0.3-0.20200630154024-f66de99634de/go.mod h1:KPxhHT9ZxKefz+PCeOGsrHpl1qZ7i70dGTu2u+Ahh6E=
 github.com/dgryski/go-farm v0.0.0-20190423205320-6a90982ecee2 h1:tdlZCpZ/P9DhczCTSixgIKmwPv6+wP5DGjqLYw5SUiA=
 github.com/dgryski/go-farm v0.0.0-20190423205320-6a90982ecee2/go.mod h1:SqUrOPUnsFjfmXRMNPybcSiG0BgUW2AuFH8PAnS2iTw=
-github.com/dominant-strategies/go-quai v0.43.2 h1:vEdGEIFROyVWCjAyhWrWEgvk1Myh318iymW4X5Gcfa0=
-github.com/dominant-strategies/go-quai v0.43.2/go.mod h1:kRbuukCU1/WGhO40EB+lA43zle3XoOhPwxmXgiuBbkg=
+github.com/dominant-strategies/go-quai v0.44.0 h1:r/stuajyW8nrfttlLZVYF/MM7Xcxtc12Rd/WurC5Ans=
+github.com/dominant-strategies/go-quai v0.44.0/go.mod h1:kRbuukCU1/WGhO40EB+lA43zle3XoOhPwxmXgiuBbkg=
 github.com/dustin/go-humanize v1.0.0 h1:VSnTsYCnlFHaM2/igO1h6X3HA71jcobQuxemgkq4zYo=
 github.com/dustin/go-humanize v1.0.0/go.mod h1:HtrtbFcZ19U5GC7JDqmcUSB87Iq5E25KnS6fMYU6eOk=
 github.com/fatih/color v1.18.0 h1:S8gINlzdQ840/4pfAwic/ZE0djQEH3wM94VfqLTZcOM=
